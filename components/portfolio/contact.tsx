@@ -1,10 +1,11 @@
-"use client"
+"use client";
 
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react"
-import emailjs from "@emailjs/browser"
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const contactInfo = [
   {
@@ -31,28 +32,37 @@ const contactInfo = [
     value: "Coimbatore, Tamil Nadu, India",
     href: null,
   },
-]
+];
 
 export function Contact() {
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault()
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
 
-  emailjs
-    .sendForm(
-      "service_qadnwoj",
-      "template_ol0jt97",
-      e.currentTarget,
-      "TFIpy0XmrQBPHMpl9"
-    )
-    .then(() => {
-      alert("Message sent successfully!")
-      e.currentTarget.reset()
-    })
-    .catch((error) => {
-      console.log(error)
-      alert("Failed to send message.")
-    })
-}
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    setLoading(true);
+    setSuccess("");
+
+    try {
+      await emailjs.sendForm(
+        "service_qadnwoj",
+        "template_ol0jt97",
+        form,
+        "TFIpy0XmrQBPHMpl9",
+      );
+
+      setSuccess("Message sent successfully!");
+      form.reset();
+    } catch (error) {
+      console.log(error);
+      setSuccess("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
@@ -84,7 +94,9 @@ export function Contact() {
                   {item.href ? (
                     <a
                       href={item.href}
-                      target={item.href.startsWith("http") ? "_blank" : undefined}
+                      target={
+                        item.href.startsWith("http") ? "_blank" : undefined
+                      }
                       rel={
                         item.href.startsWith("http")
                           ? "noopener noreferrer"
@@ -138,10 +150,7 @@ export function Contact() {
                 I usually respond within 24 hours.
               </p>
 
-              <form
-  className="space-y-4"
-  onSubmit={sendEmail}
->
+              <form className="space-y-4" onSubmit={sendEmail}>
                 <div>
                   <label
                     htmlFor="name"
@@ -153,8 +162,10 @@ export function Contact() {
                   <input
                     type="text"
                     id="name"
+                    name="name"
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground"
                     placeholder="Enter your name"
+                    required
                   />
                 </div>
 
@@ -169,8 +180,10 @@ export function Contact() {
                   <input
                     type="email"
                     id="email"
+                    name="email"
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors text-foreground"
                     placeholder="your@email.com"
+                    required
                   />
                 </div>
 
@@ -184,21 +197,32 @@ export function Contact() {
 
                   <textarea
                     id="message"
+                    name="message"
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg bg-muted border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-none text-foreground"
                     placeholder="Write your message here..."
+                    required
                   />
                 </div>
 
-                <Button className="w-full gap-2 h-11">
+                <Button
+                  type="submit"
+                  className="w-full gap-2 h-11"
+                  disabled={loading}
+                >
                   <Send className="h-4 w-4" />
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
+                {success && (
+                  <p className="text-sm text-center text-primary mt-3">
+                    {success}
+                  </p>
+                )}
               </form>
             </CardContent>
           </Card>
         </div>
       </div>
     </section>
-  )
+  );
 }
