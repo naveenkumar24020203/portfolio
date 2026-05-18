@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 const contactInfo = [
   {
@@ -33,6 +34,26 @@ const contactInfo = [
 ]
 
 export function Contact() {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+
+  emailjs
+    .sendForm(
+      "service_qadnwoj",
+      "template_ol0jt97",
+      e.currentTarget,
+      "TFIpy0XmrQBPHMpl9"
+    )
+    .then(() => {
+      alert("Message sent successfully!")
+      e.currentTarget.reset()
+    })
+    .catch((error) => {
+      console.log(error)
+      alert("Failed to send message.")
+    })
+}
+
   return (
     <section id="contact" className="py-20 px-4 bg-muted/30">
       <div className="max-w-6xl mx-auto">
@@ -117,7 +138,10 @@ export function Contact() {
                 I usually respond within 24 hours.
               </p>
 
-              <form className="space-y-4">
+              <form
+  className="space-y-4"
+  onSubmit={sendEmail}
+>
                 <div>
                   <label
                     htmlFor="name"
