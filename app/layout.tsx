@@ -3,6 +3,8 @@ import { Inter, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { ThemeProvider } from '@/components/theme-provider'
 import './globals.css'
+import AOSProvider from '@/components/ui/AOSProvider'
+
 
 const inter = Inter({ 
   subsets: ["latin"],
@@ -53,6 +55,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <AOSProvider />
         </ThemeProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

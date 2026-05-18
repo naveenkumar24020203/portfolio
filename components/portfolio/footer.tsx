@@ -8,8 +8,8 @@ export function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>© {currentYear} Naveen Kumar S. Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+            <span>© {currentYear} Naveen Kumar S</span>
+            
           </div>
 
           <div className="flex items-center gap-4">
