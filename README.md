@@ -46,8 +46,9 @@ pattern holds for skills, experience and certifications.
 - **`Reveal`** — wraps anything that should fade/lift in when scrolled into view.
   Pass `delay` (ms) to stagger a list.
 - **`SpotlightCard`** — a `Card` that renders a cursor-following glow.
-- **`TestRunTerminal`** — the animated Playwright run in the Stats section. The
-  output is illustrative, built from the suites named in the Projects section.
+- **`TestRunTerminal`** — the animated Maven/TestNG run in the Stats section.
+  The output is illustrative, built from the suites named in the Projects
+  section.
 
 All three respect `prefers-reduced-motion` and render their finished state
 immediately when it is set.

@@ -6,19 +6,30 @@ import { Reveal } from "@/components/portfolio/reveal"
 import { SpotlightCard } from "@/components/portfolio/spotlight-card"
 import { TestRunTerminal } from "@/components/portfolio/test-run-terminal"
 import { useCountUp } from "@/hooks/use-count-up"
-import { Bug, CalendarClock, FolderKanban, GraduationCap } from "lucide-react"
+import { Bug, CalendarClock, Gauge, ShieldCheck } from "lucide-react"
 
-/** Every figure here is sourced from the Experience, Projects and
- *  Certifications sections so the numbers stay in step with the rest of the page. */
+/** Every figure here is drawn from the Experience and Projects sections, which
+ *  in turn track the résumé — so the numbers stay in step across the page. */
 const stats = [
-  { icon: CalendarClock, value: 2, suffix: "+", label: "Years in QA" },
-  { icon: Bug, value: 100, suffix: "+", label: "Defects tracked" },
-  { icon: FolderKanban, value: 5, suffix: "", label: "Platforms tested" },
-  { icon: GraduationCap, value: 4, suffix: "", label: "Certifications" },
+  {
+    icon: CalendarClock,
+    value: 2.5,
+    decimals: 1,
+    suffix: "+",
+    label: "Years in QA",
+  },
+  {
+    icon: ShieldCheck,
+    value: 90,
+    suffix: "%+",
+    label: "Test coverage delivered",
+  },
+  { icon: Gauge, value: 30, suffix: "%", label: "Faster regression cycles" },
+  { icon: Bug, value: 100, suffix: "+", label: "Issues tracked" },
 ]
 
 function Stat({ stat }: { stat: (typeof stats)[number] }) {
-  const { ref, value } = useCountUp(stat.value)
+  const { ref, value } = useCountUp(stat.value, { decimals: stat.decimals })
 
   return (
     <SpotlightCard className="bg-card/50 border-border hover:border-primary/50 transition-colors h-full">
@@ -52,8 +63,8 @@ export function Stats() {
                 Quality, measured
               </h2>
               <p className="text-muted-foreground mb-6 text-sm sm:text-base">
-                Shipping regression suites that run green in CI — across
-                healthcare, AI infrastructure, hiring and vendor platforms.
+                Regression suites that run green — across AI infrastructure,
+                healthcare, hiring and vendor platforms.
               </p>
             </Reveal>
 

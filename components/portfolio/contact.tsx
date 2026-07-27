@@ -8,6 +8,7 @@ import { Reveal } from "@/components/portfolio/reveal"
 import { SpotlightCard } from "@/components/portfolio/spotlight-card"
 import {
   Mail,
+  Phone,
   Linkedin,
   Github,
   MapPin,
@@ -33,6 +34,12 @@ const contactInfo = [
     href: "mailto:naveen6382921040@gmail.com",
   },
   {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 63829 21040",
+    href: "tel:+916382921040",
+  },
+  {
     icon: Linkedin,
     label: "LinkedIn",
     value: "linkedin.com/in/naveen-kumar-s",
@@ -47,7 +54,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Coimbatore, Tamil Nadu, India",
+    value: "Coimbatore – 641107, Tamil Nadu",
     href: null,
   },
 ]
@@ -254,7 +261,7 @@ export function Contact() {
 
                   <p aria-live="polite" className="min-h-5">
                     {status === "sent" && (
-                      <span className="flex items-center justify-center gap-1.5 text-sm text-emerald-500">
+                      <span className="flex items-center justify-center gap-1.5 text-sm text-success">
                         <CheckCircle2 className="h-4 w-4" />
                         Message sent — I&apos;ll be in touch shortly.
                       </span>

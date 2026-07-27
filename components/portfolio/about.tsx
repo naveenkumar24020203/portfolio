@@ -7,33 +7,34 @@ import { SpotlightCard } from "@/components/portfolio/spotlight-card"
 import { CheckCircle2, Briefcase, GraduationCap, Target } from "lucide-react"
 
 const highlights = [
-  "2+ years of QA experience",
+  "2.5+ years of QA experience",
   "Manual & Automation Testing",
-  "Playwright & Selenium expertise",
-  "API & CI/CD testing",
+  "Selenium, Playwright & TestNG",
+  "AI-native QA workflows",
 ]
 
 const cards = [
   {
     icon: Briefcase,
     title: "Professional Experience",
-    body: "Experience working on enterprise-level web applications with focus on automation testing, regression testing, API validation, and release quality.",
+    body: "Enterprise web applications across AI infrastructure, healthcare, hiring and vendor management — automation, regression, API validation and release quality.",
   },
   {
     icon: GraduationCap,
     title: "Education",
     body: (
       <>
-        MCA (Pursuing) – Bharathiar University
+        MCA (Pursuing) – Bharathiar University, Feb 2025 – Present
         <br />
-        B.Sc. Computer Science with Data Analytics
+        B.Sc. Computer Science with Data Analytics – Dr. N.G.P Arts and Science
+        College, 2023
       </>
     ),
   },
   {
     icon: Target,
     title: "Current Focus",
-    body: "Building modern Playwright automation frameworks and exploring AI-powered QA workflows, scalable testing strategies, and advanced automation practices.",
+    body: "Building AI agents into the QA workflow — automated defect capture and filing, and commit/PR review for QA-relevant changes — alongside prompt-driven test tooling.",
   },
 ]
 
@@ -60,7 +61,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <Reveal className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I&rsquo;m a QA Engineer with 2+ years of experience in Manual and
+              I&rsquo;m a QA Engineer with 2.5+ years of experience in Manual and
               Automation Testing across SaaS, Healthcare, AI, and Vendor
               Management platforms. I have worked in Agile teams closely with
               developers, product managers, and business stakeholders to ensure
@@ -70,12 +71,16 @@ export function About() {
             <p className="text-muted-foreground leading-relaxed">
               My expertise includes{" "}
               <span className="text-foreground font-medium">
-                Playwright, Selenium, Java, JavaScript, TestNG, Cucumber BDD,
-                API Testing, SQL,
+                Selenium with Java, Playwright, TestNG, Cucumber BDD, API
+                Testing, SQL,
               </span>{" "}
-              and CI/CD workflows using GitHub Actions. I enjoy designing
-              scalable automation frameworks, improving regression coverage, and
-              exploring AI-driven QA solutions.
+              and CI/CD workflows using GitHub Actions. Lately I&rsquo;ve been
+              expanding into{" "}
+              <span className="text-foreground font-medium">
+                AI-native QA
+              </span>{" "}
+              — building agent-based tooling that captures and files defects
+              automatically and reviews commits for QA-relevant changes.
             </p>
 
             <div className="grid grid-cols-2 gap-3">

@@ -3,19 +3,20 @@
 import { useEffect, useRef, useState } from "react"
 import { useReducedMotion } from "@/hooks/use-reduced-motion"
 
-const COMMAND = "npx playwright test --project=chromium"
+const COMMAND = "mvn test -DsuiteXmlFile=regression.xml"
 
 /** Illustrative run built from the suites listed in the Projects section. */
 const RESULT_LINES = [
-  { kind: "muted", text: "Running 5 suites with 3 workers" },
+  { kind: "muted", text: "[INFO] Running RegressionSuite" },
   { kind: "blank", text: "" },
-  { kind: "pass", text: "neubird/incident-workflow.spec.ts", time: "4.2s" },
-  { kind: "pass", text: "neohire/candidate-pipeline.spec.ts", time: "3.8s" },
-  { kind: "pass", text: "onecare/telehealth-booking.spec.ts", time: "5.1s" },
-  { kind: "pass", text: "arenacx/vendor-routing.spec.ts", time: "2.9s" },
-  { kind: "pass", text: "api/contract-validation.spec.ts", time: "1.4s" },
+  { kind: "pass", text: "Neubird — incident alerting", time: "4.2s" },
+  { kind: "pass", text: "Neohire — screening to offer", time: "3.8s" },
+  { kind: "pass", text: "OneCare — telehealth booking", time: "5.1s" },
+  { kind: "pass", text: "ArenaCX — vendor routing", time: "2.9s" },
+  { kind: "pass", text: "Prodege — reward flow", time: "1.4s" },
   { kind: "blank", text: "" },
-  { kind: "summary", text: "5 passed (17.4s)" },
+  { kind: "muted", text: "Tests run: 5, Failures: 0, Skipped: 0" },
+  { kind: "summary", text: "BUILD SUCCESS" },
 ] as const
 
 const TYPE_MS = 42
@@ -108,7 +109,7 @@ export function TestRunTerminal() {
 
             if (line.kind === "summary") {
               return (
-                <div key={index} className="text-emerald-500 font-semibold">
+                <div key={index} className="text-success font-semibold">
                   {line.text}
                 </div>
               )
@@ -116,7 +117,7 @@ export function TestRunTerminal() {
 
             return (
               <div key={index} className="flex items-baseline gap-2">
-                <span className="text-emerald-500 shrink-0">✓</span>
+                <span className="text-success shrink-0">✓</span>
                 <span className="text-muted-foreground break-all">
                   {line.text}
                 </span>

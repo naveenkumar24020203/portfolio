@@ -4,21 +4,31 @@ import { Badge } from "@/components/ui/badge"
 import { CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Reveal } from "@/components/portfolio/reveal"
 import { SpotlightCard } from "@/components/portfolio/spotlight-card"
-import { TestTube2, Bot, Code2, Server, GitBranch, Wrench } from "lucide-react"
+import { TestTube2, Bot, Code2, Server, Sparkles, Wrench } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Automation Testing",
+    title: "Automation & Frameworks",
     icon: Bot,
     skills: [
+      "Selenium with Java",
       "Playwright",
-      "Selenium",
       "TestNG",
-      "Cucumber BDD",
+      "Cucumber (BDD)",
       "Page Object Model",
-      "Data-Driven Testing",
+      "ExtentReports",
       "Cross Browser Testing",
-      "Extent Reports",
+    ],
+  },
+  {
+    title: "AI-Native QA",
+    icon: Sparkles,
+    skills: [
+      "Bug Logger Agent",
+      "Git Checker Agent",
+      "AI Agent Workflows",
+      "Prompt-Driven Test Tooling",
+      "Model Context Protocol",
     ],
   },
   {
@@ -26,64 +36,44 @@ const skillCategories = [
     icon: TestTube2,
     skills: [
       "Test Case Design",
-      "Regression Testing",
-      "Smoke Testing",
-      "Functional Testing",
-      "UAT",
-      "Bug Reporting",
+      "Bug Life Cycle",
       "SDLC/STLC",
+      "UAT",
       "Agile Methodology",
+      "Regression Testing",
+      "Functional Testing",
     ],
   },
   {
-    title: "API Testing",
+    title: "API & Performance",
     icon: Server,
     skills: [
       "Postman",
       "Swagger",
       "REST API Testing",
       "JSON Validation",
-      "API Automation",
       "Status Code Validation",
-      "Request/Response Testing",
+      "JMeter",
     ],
   },
   {
-    title: "Programming",
+    title: "Programming & Tech",
     icon: Code2,
-    skills: [
-      "Java",
-      "JavaScript",
-      "SQL",
-      "HTML",
-      "Gherkin",
-      "Basic TypeScript",
-    ],
+    skills: ["Java", "SQL", "HTML", "JSON", "Gherkin"],
   },
   {
-    title: "CI/CD & Version Control",
-    icon: GitBranch,
-    skills: [
-      "Git",
-      "GitHub",
-      "GitHub Actions",
-      "CI/CD Pipelines",
-      "Automation Execution",
-      "Build Validation",
-    ],
-  },
-  {
-    title: "Tools & Platforms",
+    title: "Tools & CI/CD",
     icon: Wrench,
     skills: [
       "JIRA",
       "YouTrack",
       "ClickUp",
       "Linear",
+      "Git",
+      "GitHub Actions",
       "Chrome DevTools",
-      "JMeter",
-      "VS Code",
-      "AI-assisted QA Tools",
+      "WordPress",
+      "Tableau",
     ],
   },
 ]

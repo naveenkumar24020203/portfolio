@@ -9,20 +9,13 @@ import { Building2, Calendar, MapPin } from "lucide-react"
 const experiences = [
   {
     id: 1,
-    company: "Viamagus",
+    company: "Viamagus Technologies Pvt Ltd",
     role: "QA Engineer",
     period: "Jan 2026 – Present",
-    location: "Remote",
+    location: "Coimbatore, Tamil Nadu",
     description:
-      "Working on enterprise applications with focus on automation testing, API validation, regression testing, and scalable QA workflows. Contributing to quality improvements through modern testing practices and Agile collaboration.",
-    tools: [
-      "Playwright",
-      "Selenium",
-      "Postman",
-      "TestNG",
-      "GitHub Actions",
-      "JIRA",
-    ],
+      "Testing monitoring and incident-management features on Neubird, an AI infrastructure reliability platform. Building AI agents into the QA workflow — a bug logger agent for automated defect capture and filing, and a git checker agent that reviews commits and PRs for QA-relevant changes.",
+    tools: ["Selenium", "TestNG", "Postman", "SQL", "Git", "AI Agent Tooling"],
     current: true,
   },
   {
@@ -32,15 +25,8 @@ const experiences = [
     period: "Jan 2025 – Oct 2025",
     location: "Coimbatore, Tamil Nadu",
     description:
-      "Designed and executed functional, regression, and API test cases for enterprise applications. Improved test coverage, tracked 100+ defects in YouTrack, and collaborated with developers during Agile sprint cycles.",
-    tools: [
-      "Selenium",
-      "TestNG",
-      "Postman",
-      "YouTrack",
-      "SQL",
-      "JMeter",
-    ],
+      "Designed functional test cases and systematised regression suites. Delivered QA reports with over 90% test coverage and tracked 100+ issues in YouTrack.",
+    tools: ["Selenium", "TestNG", "Postman", "YouTrack"],
     current: false,
   },
   {
@@ -50,14 +36,8 @@ const experiences = [
     period: "Sept 2024 – Dec 2024",
     location: "Remote",
     description:
-      "Developed and maintained automated test scripts for vendor management platforms using Playwright and Selenium. Supported UAT testing, bug validation, and release verification across cross-functional teams.",
-    tools: [
-      "Playwright",
-      "Selenium",
-      "Postman",
-      "ClickUp",
-      "JavaScript",
-    ],
+      "Scripted and implemented automated test scenarios for vendor management, improving test reliability by 25%. Coordinated UAT across three cross-functional teams to ensure timely release sign-offs.",
+    tools: ["Selenium", "Playwright", "Postman", "ClickUp"],
     current: false,
   },
   {
@@ -67,14 +47,8 @@ const experiences = [
     period: "Aug 2023 – Sept 2024",
     location: "Remote",
     description:
-      "Created detailed manual test cases, executed end-to-end testing for browser extensions, and validated APIs using Swagger and Postman. Logged and tracked defects through JIRA workflows.",
-    tools: [
-      "Postman",
-      "Swagger",
-      "JIRA",
-      "Manual Testing",
-      "Regression Testing",
-    ],
+      "Authored 100+ detailed test cases and logged 70+ defects in JIRA, accelerating defect resolution. Executed end-to-end testing for browser extensions including MyPoints and coupon-based extensions.",
+    tools: ["Swagger", "Postman", "JIRA", "Manual Testing"],
     current: false,
   },
 ]

@@ -8,8 +8,9 @@ import { Github, Linkedin, Mail, FileText } from "lucide-react"
 const roles = [
   "QA Engineer",
   "Automation Test Engineer",
-  "Playwright & Selenium Specialist",
+  "Selenium & Playwright Specialist",
   "API Testing Engineer",
+  "AI-Native QA Engineer",
   "SDET Enthusiast",
 ]
 
@@ -95,17 +96,21 @@ export function Hero() {
 
         <div className="animate-fade-in-up-delay-2">
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-base sm:text-lg leading-relaxed">
-            QA Engineer with 2+ years of experience in{" "}
+            QA Engineer with 2.5+ years of experience in{" "}
             <span className="text-foreground font-medium">Manual Testing</span>,{" "}
             <span className="text-foreground font-medium">
               Automation Testing
             </span>
             , <span className="text-foreground font-medium">API Validation</span>
             , and{" "}
-            <span className="text-foreground font-medium">CI/CD workflows</span>.
-            Skilled in building scalable automation frameworks using Playwright,
-            Selenium, Java, and JavaScript while ensuring high-quality software
-            delivery in Agile environments.
+            <span className="text-foreground font-medium">CI/CD workflows</span>
+            , now expanding into{" "}
+            <span className="text-foreground font-medium">
+              AI-native QA
+            </span>
+            . Skilled in building scalable automation frameworks with Selenium,
+            Java, Playwright and TestNG while ensuring high-quality delivery in
+            Agile environments.
           </p>
         </div>
 
