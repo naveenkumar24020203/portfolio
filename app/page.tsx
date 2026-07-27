@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/portfolio/navbar"
 import { Hero } from "@/components/portfolio/hero"
+import { Stats } from "@/components/portfolio/stats"
 import { About } from "@/components/portfolio/about"
 import { Skills } from "@/components/portfolio/skills"
 import { Projects } from "@/components/portfolio/projects"
@@ -13,6 +14,7 @@ export default function Portfolio() {
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <Stats />
       <About />
       <Skills />
       <Projects />

@@ -1,7 +1,9 @@
 "use client"
 
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
+import { CardContent } from "@/components/ui/card"
+import { Reveal } from "@/components/portfolio/reveal"
+import { SpotlightCard } from "@/components/portfolio/spotlight-card"
 import { Building2, Calendar, MapPin } from "lucide-react"
 
 const experiences = [
@@ -79,16 +81,23 @@ const experiences = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 bg-muted/30">
+    <section
+      id="experience"
+      className="scroll-mt-20 py-20 px-4 bg-muted/30"
+    >
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4">Experience</Badge>
+        <Reveal className="text-center mb-12">
+          <Badge variant="secondary" className="mb-4">
+            Experience
+          </Badge>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Professional Journey
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-My career path in software quality assurance, automation testing, and modern QA engineering          </p>
-        </div>
+            My career path in software quality assurance, automation testing,
+            and modern QA engineering
+          </p>
+        </Reveal>
 
         <div className="relative">
           {/* Timeline line */}
@@ -96,18 +105,19 @@ My career path in software quality assurance, automation testing, and modern QA 
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div 
-                key={exp.id} 
+              <Reveal
+                key={exp.id}
+                delay={index * 80}
                 className={`relative flex flex-col md:flex-row gap-8 ${
                   index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}
               >
                 {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 top-6 w-4 h-4 rounded-full bg-primary border-4 border-background transform md:-translate-x-1/2 hidden md:block z-10" />
-                
+                <div className={`absolute left-0 md:left-1/2 top-6 w-4 h-4 rounded-full border-4 border-background transform md:-translate-x-1/2 hidden md:block z-10 ${exp.current ? 'bg-primary ring-4 ring-primary/20' : 'bg-primary'}`} />
+
                 {/* Content */}
                 <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
-                  <Card className={`bg-card/50 border-border hover:border-primary/50 transition-all hover:shadow-lg ${exp.current ? 'border-primary/30' : ''}`}>
+                  <SpotlightCard className={`bg-card/50 border-border hover:border-primary/50 transition-all hover:shadow-lg ${exp.current ? 'border-primary/30' : ''}`}>
                     <CardContent className="p-6">
                       <div className={`flex items-center gap-2 mb-2 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                         {exp.current && (
@@ -116,7 +126,7 @@ My career path in software quality assurance, automation testing, and modern QA 
                       </div>
                       
                       <div className={`flex items-start gap-3 mb-4 ${index % 2 === 0 ? 'md:flex-row-reverse md:text-right' : ''}`}>
-                        <div className="p-2 rounded-lg bg-primary/10 flex-shrink-0">
+                        <div className="p-2 rounded-lg bg-primary/10 shrink-0">
                           <Building2 className="h-5 w-5 text-primary" />
                         </div>
                         <div>
@@ -148,12 +158,12 @@ My career path in software quality assurance, automation testing, and modern QA 
                         ))}
                       </div>
                     </CardContent>
-                  </Card>
+                  </SpotlightCard>
                 </div>
 
                 {/* Spacer for alternating layout */}
                 <div className="hidden md:block md:w-1/2" />
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
