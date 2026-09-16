@@ -13,8 +13,8 @@ import { Bug, CalendarClock, Gauge, ShieldCheck } from "lucide-react"
 const stats = [
   {
     icon: CalendarClock,
-    value: 2.5,
-    decimals: 1,
+    value: 3,
+    decimals: 0,
     suffix: "+",
     label: "Years in QA",
   },

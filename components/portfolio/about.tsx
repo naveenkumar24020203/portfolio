@@ -7,7 +7,7 @@ import { SpotlightCard } from "@/components/portfolio/spotlight-card"
 import { CheckCircle2, Briefcase, GraduationCap, Target } from "lucide-react"
 
 const highlights = [
-  "2.5+ years of QA experience",
+  "3+ years of QA experience",
   "Manual & Automation Testing",
   "Selenium, Playwright & TestNG",
   "AI-native QA workflows",
@@ -61,7 +61,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <Reveal className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              I&rsquo;m a QA Engineer with 2.5+ years of experience in Manual and
+              I&rsquo;m a QA Engineer with 3+ years of experience in Manual and
               Automation Testing across SaaS, Healthcare, AI, and Vendor
               Management platforms. I have worked in Agile teams closely with
               developers, product managers, and business stakeholders to ensure

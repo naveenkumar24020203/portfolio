@@ -52,28 +52,6 @@ const certifications: Certification[] = [
   },
   {
     id: 4,
-    title: "Claude Code in Action",
-    issuer: "Anthropic",
-    date: "2025",
-    credentialUrl: "https://verify.skilljar.com/c/uy3ebxetxtk5",
-    description:
-      "Hands-on experience using Claude for code generation, debugging, and developer workflows.",
-    iconBg: "bg-indigo-500/10",
-    iconText: "text-indigo-500",
-  },
-  {
-    id: 5,
-    title: "Introduction to Agent Skills",
-    issuer: "Anthropic",
-    date: "2025",
-    credentialUrl: "https://verify.skilljar.com/c/e5icycnzeire",
-    description:
-      "Learned AI agent capabilities, workflows, and practical implementation concepts.",
-    iconBg: "bg-sky-500/10",
-    iconText: "text-sky-500",
-  },
-  {
-    id: 6,
     title: "Selenium WebDriver with Java",
     issuer: "Test Automation University",
     date: "Jun 2025",
@@ -83,19 +61,7 @@ const certifications: Certification[] = [
     iconText: "text-emerald-500",
   },
   {
-    id: 7,
-    title: "GitHub Actions for Testing",
-    issuer: "Test Automation University",
-    date: "2025",
-    credentialUrl:
-      "https://testautomationu.applitools.com/certificate/?id=d657dff4",
-    description:
-      "Implemented automated testing pipelines using GitHub Actions and CI/CD workflows.",
-    iconBg: "bg-teal-500/10",
-    iconText: "text-teal-500",
-  },
-  {
-    id: 8,
+    id: 5,
     title: "Postman API Fundamentals",
     issuer: "Postman",
     date: "Apr 2025",

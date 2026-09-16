@@ -15,7 +15,7 @@ const experiences = [
     location: "Coimbatore, Tamil Nadu",
     description:
       "Testing monitoring and incident-management features on Neubird, an AI infrastructure reliability platform. Building AI agents into the QA workflow — a bug logger agent for automated defect capture and filing, and a git checker agent that reviews commits and PRs for QA-relevant changes.",
-    tools: ["Selenium", "TestNG", "Postman", "SQL", "Git", "AI Agent Tooling"],
+    tools: ["Playwright", "Postman", "SQL", "Git", "AI Agent Tooling"],
     current: true,
   },
   {

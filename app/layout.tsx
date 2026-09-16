@@ -30,7 +30,7 @@ const siteUrl =
 
 const title = 'Naveen Kumar S | QA Engineer Portfolio'
 const description =
-  'QA Engineer with 2.5+ years of experience in Manual and Automation Testing. Skilled in Selenium, Playwright, TestNG, and API testing.'
+  'QA Engineer with 3+ years of experience in Manual and Automation Testing. Skilled in Selenium, Playwright, TestNG, and API testing.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
